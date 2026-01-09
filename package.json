@@ -1,7 +1,7 @@
 {
   "name": "mcp-server-meta2d",
   "version": "0.1.0",
-  "description": "A Model Context Protocol server",
+  "description": "A Model Context Protocol server base meta2d",
   "private": true,
   "type": "module",
   "bin": {
