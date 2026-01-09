@@ -1,16 +1,12 @@
 import { z } from "zod";
-
+import {basePenSchema} from "../utils/schema.js";
 const NAME = "square"
 
 export const squarePenTool = {
     name: "meta2d_squarePen",
     description: "Draw a meta2d square pen",
     inputSchema: z.object({
-        x: z.number().describe("X coordinate of the top-left corner"),
-        y: z.number().describe("Y coordinate of the top-left corner"),
-        width: z.number().describe("width of the square"),
-        height: z.number().describe("height of the square"),
-        text: z.string().describe("Text to display on the square center")
+        ...basePenSchema.shape
     }),
     run: async (params:{
         name: "square",
