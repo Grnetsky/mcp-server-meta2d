@@ -1,9 +1,11 @@
 import {squarePenTool} from "./square.js";
-
+import {echartsMCPTool} from "./echart.js";
 export const tools = [
-    squarePenTool
+    squarePenTool,
+    echartsMCPTool
 ]
 
 export {
-    squarePenTool
+    squarePenTool,
+    echartsMCPTool
 }

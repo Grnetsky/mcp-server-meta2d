@@ -1,19 +1,22 @@
+import {z} from "zod";
+import {BasePenSchema, basePenSchema} from "../utils/schema.js";
 
-
-const echartMCPTool = {
-    name: "EChart",
+export const echartsMCPTool = {
+    name: "meta2d_EChart",
     description: "Generate EChart",
-    inputSchema: {
-        type: "object",
-        properties: {
-            title: {
-                type: "string",
-                description: "Title of the chart"
-            },
-            data: {
-                type: "array",
-                description: "Data for the chart"
-            }
+    inputSchema: z.object({
+        ...basePenSchema.shape
+    }),
+
+    /**
+     * TODO 使用mcp客户端进行调用echarts的mcp服务
+     * 由于暂时没有MCP客户端 暂时不实现
+     * */
+    run:async (
+        params: BasePenSchema & {
+            name: "echarts",
         }
+    )=>{
+
     }
 }

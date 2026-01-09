@@ -7,3 +7,5 @@ export const basePenSchema = z.object({
     height: z.number().describe("height of the square"),
     text: z.string().describe("Text to display on the square center")
 })
+
+export type BasePenSchema = z.infer<typeof basePenSchema>
